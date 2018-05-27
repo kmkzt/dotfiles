@@ -18,6 +18,9 @@ fi
 
 unsetopt promptcr
 
+# ssh
+alias sk='ssh-add -K'
+
 # Git commnad
 alias gbr='git branch'
 alias gch='git checkout'
