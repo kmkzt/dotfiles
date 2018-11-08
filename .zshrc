@@ -21,7 +21,7 @@ unsetopt promptcr
 # ssh
 alias sk='ssh-add -K'
 
-# Git commnad
+# Git command
 alias gbr='git branch'
 alias gch='git checkout'
 alias gfa='git fetch -a'
@@ -32,6 +32,9 @@ alias glog='git log --pretty=short --graph'
 alias grs='git reset --soft HEAD^'
 alias gst='git status'
 alias gg='git grep'
+
+# docker command
+alias dcclear='docker rm -f $(docker ps -aq)' # dockerのコンテナを一括削除
 
 # peco
 function peco-src() {
