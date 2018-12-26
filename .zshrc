@@ -18,6 +18,9 @@ fi
 
 unsetopt promptcr
 
+#deno curl -L https://deno.land/x/install/install.py | python
+export PATH=$HOME/.deno/bin:$PATH
+
 # ssh
 alias sk='ssh-add -K'
 
@@ -31,6 +34,7 @@ alias grb='git rebase origin '
 alias glog='git log --pretty=short --graph'
 alias grs='git reset --soft HEAD^'
 alias gst='git status'
+alias gsta='git stash'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 
