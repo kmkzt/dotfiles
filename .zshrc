@@ -24,6 +24,7 @@ alias sk='ssh-add -K'
 # Git command
 alias gbr='git branch'
 alias gch='git checkout'
+alias gbc='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
 alias gfa='git fetch -a'
 alias gpsh='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gpll='git pull origin `git rev-parse --abbrev-ref HEAD`'
@@ -33,6 +34,7 @@ alias grs='git reset --soft HEAD^'
 alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
+alias gdfn='git diff HEAD..HEAD^ --name-only'
 
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
