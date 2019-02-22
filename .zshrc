@@ -36,6 +36,11 @@ alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
 
+# fork元を操作するコマンド
+alias gaupstream='git remote add upstream'
+alias gfupstream='git fetch upstream'
+alias gaupstream='git merge upstream/master'
+
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
