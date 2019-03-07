@@ -41,9 +41,9 @@ alias gfefm=`git fetch fork_master`
 
 
 # fork元を操作するコマンド
-alias gaupstream='git remote add upstream'
-alias gfupstream='git fetch upstream'
-alias gaupstream='git merge upstream/master'
+alias gaup='git remote add upstream'
+alias gfup='git fetch upstream'
+alias gmup='git merge upstream/master'
 
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
