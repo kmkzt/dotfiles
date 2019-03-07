@@ -27,8 +27,8 @@ alias gch='git checkout'
 alias gbc='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
 alias gfa='git fetch -a'
 alias gpsh='git push origin `git rev-parse --abbrev-ref HEAD`'
-alias gpll='git pull origin `git rev-parse --abbrev-ref HEAD`'
-alias grb='git rebase origin '
+alias gpll='git pull origin `git rev-parse --abbrev-ref HEAD` --rebase'
+alias grb='git rebase'
 alias glog='git log --pretty=short --graph'
 alias grs='git reset --soft HEAD^'
 alias gst='git status'
@@ -38,7 +38,6 @@ alias gdfn='git diff HEAD..HEAD^ --name-only'
 # フォーク元の設定・更新系のコマンド
 alias grafm=`git remote add fork_master`
 alias gfefm=`git fetch fork_master`
-
 
 # fork元を操作するコマンド
 alias gaup='git remote add upstream'
