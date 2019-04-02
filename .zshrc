@@ -10,12 +10,10 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.pyenv/shims:$PATH"
 eval "$(pyenv init -)"
 
-# Node
-if [[ -s ~/.nvm/nvm.sh ]];
- then source ~/.nvm/nvm.sh
- npm config delete prefix
-fi
+# node
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# zshrc config
 unsetopt promptcr
 
 # ssh
