@@ -1,6 +1,6 @@
 
-if test ! $(which brew); then
-  echo "insalling node"
+if test ! $(which node); then
+  echo "insalling node..."
   curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
   nvm install stable
   nvm alias default stable
