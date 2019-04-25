@@ -3,15 +3,18 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Ruby
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
 # Python
-export PATH="$HOME/.pyenv/shims:$PATH"
+export PATH=$HOME/.pyenv/shims:$PATH
 eval "$(pyenv init -)"
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
 
 # zshrc config
 unsetopt promptcr
