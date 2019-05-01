@@ -21,3 +21,6 @@ bindkey "^N" history-beginning-search-forward-end
 
 # alias
 alias diff="coloddiff"
+
+# ssh add key
+ssh-add -K ~/.ssh/github
