@@ -1,1 +1,3 @@
-$ ln -sf ~/dotfiles/.zprofile ~/.zshrc
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zprofile ~/.zprofile
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
