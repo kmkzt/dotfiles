@@ -17,6 +17,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
 # Flutter
+# Docs -> https://flutter.dev/docs/get-started/install/macos
 export PATH="$PATH:`pwd`/flutter/bin"
 
 # zshrc config
