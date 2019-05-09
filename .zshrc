@@ -18,7 +18,11 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 # Flutter
 # Docs -> https://flutter.dev/docs/get-started/install/macos
-export PATH="$PATH:`pwd`/flutter/bin"
+export PATH=$PATH:$HOME/flutter/bin
+
+# Dart 
+# PUB: Dart Package Manager -> https://dart.dev/tools/pub/cmd/pub-global#running-a-script-from-your-path
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 # zshrc config
 unsetopt promptcr
@@ -41,8 +45,8 @@ alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
 # フォーク元の設定・更新系のコマンド
-alias grafm=`git remote add fork_master`
-alias gfefm=`git fetch fork_master`
+alias grafm='git remote add fork_master'
+alias gfefm='git fetch fork_master'
 
 # fork元を操作するコマンド
 alias gaup='git remote add upstream'
