@@ -16,6 +16,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
 
+# Flutter
+export PATH="$PATH:`pwd`/flutter/bin"
+
 # zshrc config
 unsetopt promptcr
 
