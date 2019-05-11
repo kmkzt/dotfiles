@@ -45,6 +45,9 @@ alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
 
+# commitizen https://github.com/commitizen/cz-cli
+alias gcz='git cz'
+
 # fork元を操作するコマンド
 alias gaup='git remote add upstream'
 alias gfup='git fetch upstream'

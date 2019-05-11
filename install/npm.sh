@@ -12,6 +12,8 @@ mod=(
   typescript
   casperjs
   webpack
+  commitizen
+  cz-conventional-changelog
 )
 
 echo "installing node modules..."
