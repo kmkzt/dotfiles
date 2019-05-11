@@ -44,9 +44,6 @@ alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
-# フォーク元の設定・更新系のコマンド
-alias grafm='git remote add fork_master'
-alias gfefm='git fetch fork_master'
 
 # fork元を操作するコマンド
 alias gaup='git remote add upstream'
