@@ -5,12 +5,13 @@ compinit
 # prompt
 PROMPT='%m:%c %n$ '
 
-# コマンド履歴
+# zshの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=6000000
 SAVEHIST=6000000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
+unsetopt promptcr
 
 # コマンド履歴検索
 autoload history-search-end
@@ -22,5 +23,8 @@ bindkey "^N" history-beginning-search-forward-end
 # alias
 alias diff="coloddiff"
 
-# ssh add key
+# Set token
+# Github 
 ssh-add -K ~/.ssh/github
+
+~/setToken.sh
