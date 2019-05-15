@@ -53,6 +53,7 @@ export PATH=$PATH:$HOME/.pub-cache/bin
 alias sk='ssh-add -K'
 
 # Git command
+alias gad='git add'
 alias gbr='git branch'
 alias gch='git checkout'
 alias gbc='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
