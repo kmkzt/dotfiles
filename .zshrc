@@ -59,7 +59,7 @@ alias gch='git checkout'
 alias gbc='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
 alias gfa='git fetch -a'
 alias gpsh='git push origin `git rev-parse --abbrev-ref HEAD`'
-alias gpll='git pull origin `git rev-parse --abbrev-ref HEAD` --rebase'
+alias gpll='git pull origin `git rev-parse --abbrev-ref HEAD`'
 alias grb='git rebase'
 alias glog='git log --pretty=short --graph'
 alias grs='git reset --soft HEAD^'
@@ -81,6 +81,9 @@ alias gmup='git merge upstream/master'
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+
+# https://github.com/Peltoche/lsd
+alias ls='lsd'
 
 # ポートデバッグ
 alias findport='lsof -i -P | grep '
