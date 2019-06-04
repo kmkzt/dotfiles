@@ -84,6 +84,8 @@ alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall
 
 # https://github.com/Peltoche/lsd
 alias ls='lsd'
+# 英語の校正ツール https://github.com/btford/write-good
+alias wg='write-good'
 
 # ポートデバッグ
 alias findport='lsof -i -P | grep '

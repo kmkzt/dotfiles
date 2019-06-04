@@ -14,6 +14,7 @@ mod=(
   webpack
   commitizen
   cz-conventional-changelog
+  write-good
 )
 
 echo "installing node modules..."
