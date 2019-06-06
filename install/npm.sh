@@ -15,6 +15,7 @@ mod=(
   commitizen
   cz-conventional-changelog
   write-good
+  lighthouse
 )
 
 echo "installing node modules..."
