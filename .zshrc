@@ -95,6 +95,9 @@ alias killport='kill -9 '
 # docker command
 alias dcclear='docker rm -f $(docker ps -aq)' # dockerのコンテナを一括削除
 
+# サイトのリソースを調べるコマンド
+alias resne='research-network'
+
 # peco
 function peco-src() {
     local src=$(ghq list --full-path | peco --query "$BUFFER")

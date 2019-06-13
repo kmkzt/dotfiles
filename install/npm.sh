@@ -16,6 +16,7 @@ mod=(
   cz-conventional-changelog
   write-good
   lighthouse
+  research-network
 )
 
 echo "installing node modules..."
