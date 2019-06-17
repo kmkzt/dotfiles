@@ -83,6 +83,10 @@ alias gmup='git merge upstream/master'
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 
+# 翻訳するコマンド(REPL) 
+# TODO: https://github.com/soimort/translate-shell の設定
+alias trans='gawk -f <(curl -Ls git.io/translate) -- -shell'
+
 # https://github.com/Peltoche/lsd
 alias ls='lsd'
 # 英語の校正ツール https://github.com/btford/write-good

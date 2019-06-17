@@ -9,6 +9,7 @@ brew update
 # Apps
 tools=(
   lsd
+  gawk
 )
 
 # Install apps to /Applications

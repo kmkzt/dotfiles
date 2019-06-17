@@ -6,6 +6,7 @@ brew install caskroom/cask/brew-cask
 apps=(
   google-chrome
   firefox
+  visual-studio-code
 )
 
 # Install apps to /Applications
