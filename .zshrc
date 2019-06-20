@@ -3,7 +3,9 @@
 autoload -U compinit
 compinit
 # prompt
-PROMPT='%~:%n$ '
+# PROMPT='%~:%n$ '
+PROMPT='%~:$ '
+
 # history
 HISTFILE=~/.zsh_history
 HISTSIZE=6000000
@@ -118,3 +120,10 @@ function peco-src() {
 zle -N peco-src
 bindkey '^]' peco-src
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/kameikazuto/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/kameikazuto/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/kameikazuto/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/kameikazuto/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
