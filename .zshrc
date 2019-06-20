@@ -83,6 +83,10 @@ alias gmup='git merge upstream/master'
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 
+# xls, docs, movie, sql, zipなどをgrepさせるCLI
+# https://github.com/phiresky/ripgrep-all
+alias rg='rga'
+
 # 翻訳するコマンド(REPL) 
 # TODO: https://github.com/soimort/translate-shell の設定
 alias trans='gawk -f <(curl -Ls git.io/translate) -- -shell'

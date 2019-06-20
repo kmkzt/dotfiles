@@ -10,6 +10,11 @@ brew update
 tools=(
   lsd
   gawk
+  ripgrep
+  pandoc
+  poppler
+  tesseract
+  ffmpeg
 )
 
 # Install apps to /Applications
