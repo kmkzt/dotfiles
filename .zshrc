@@ -20,9 +20,6 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 setopt nonomatch # escapt `no matches found.` 
 
-# alias
-alias diff="coloddiff"
-
 # Github SSH
 ssh-add -K ~/.ssh/github
 
@@ -31,12 +28,15 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Ruby
-export PATH=$HOME/.rbenv/shims:$PATH
-eval "$(rbenv init -)"
-
+if [[ -x `which rbenv` ]]; then
+    export PATH=$HOME/.rbenv/shims:$PATH
+    eval "$(rbenv init -)"
+fi
 # Python
-export PATH=$HOME/.pyenv/shims:$PATH
-eval "$(pyenv init -)"
+if [[ -x `which rbenv` ]]; then
+    export PATH=$HOME/.pyenv/shims:$PATH
+    eval "$(pyenv init -)"
+fi
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -87,7 +87,7 @@ alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall
 
 # xls, docs, movie, sql, zipなどをgrepさせるCLI
 # https://github.com/phiresky/ripgrep-all
-alias rg='rga'
+# alias rg='rga'
 
 # 翻訳するコマンド(REPL) 
 # TODO: https://github.com/soimort/translate-shell の設定
