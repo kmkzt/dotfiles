@@ -7,6 +7,7 @@ fi
 brew update
 
 # Apps
+# FPP: https://github.com/facebook/PathPicker
 tools=(
   lsd
   gawk
@@ -15,6 +16,7 @@ tools=(
   poppler
   tesseract
   ffmpeg
+  fpp
 )
 
 # Install apps to /Applications
