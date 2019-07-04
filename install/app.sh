@@ -12,3 +12,21 @@ apps=(
 # Install apps to /Applications
 echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
+
+# Apps
+# FPP: https://github.com/facebook/PathPicker
+tools=(
+  lsd
+  gawk
+  ripgrep
+  pandoc
+  poppler
+  tesseract
+  ffmpeg
+  fpp
+  lazygit
+)
+
+# Install apps to /Applications
+echo "installing　tools ..."
+brew install ${tools[@]}
