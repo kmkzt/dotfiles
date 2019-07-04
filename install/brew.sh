@@ -17,6 +17,7 @@ tools=(
   tesseract
   ffmpeg
   fpp
+  lazygit
 )
 
 # Install apps to /Applications

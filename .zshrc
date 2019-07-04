@@ -80,6 +80,9 @@ alias ghcg="github_changelog_generator"
 alias gaup='git remote add upstream'
 alias gfup='git fetch upstream'
 alias gmup='git merge upstream/master'
+# lazygit
+# https://github.com/jesseduffield/lazygit
+alias lg='lazygit'
 
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
