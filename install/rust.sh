@@ -12,3 +12,8 @@ mod=(
 
 echo "installing node modules..."
 cargo install ${mod[@]}
+
+# IDE Plugins
+# https://github.com/rust-lang/rls
+rustup update
+rustup component add rls rust-analysis rust-src
