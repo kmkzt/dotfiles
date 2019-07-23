@@ -25,6 +25,7 @@ tools=(
   ffmpeg
   fpp
   lazygit
+  git-extras
 )
 
 # Install apps to /Applications
