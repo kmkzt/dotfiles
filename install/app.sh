@@ -3,10 +3,12 @@ echo "Installing brew cask..."
 brew install caskroom/cask/brew-cask
 
 # Apps
+# GifCapture: https://github.com/onmyway133/GifCapture
 apps=(
   google-chrome
   firefox
   visual-studio-code
+  gifcapture
 )
 
 # Install apps to /Applications
