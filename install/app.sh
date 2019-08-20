@@ -17,6 +17,7 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # Apps
 # FPP: https://github.com/facebook/PathPicker
+# nkf: https://github.com/nurse/nkf
 tools=(
   lsd
   gawk
@@ -28,6 +29,7 @@ tools=(
   fpp
   lazygit
   git-extras
+  nkf
 )
 
 # Install apps to /Applications
