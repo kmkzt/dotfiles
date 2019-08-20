@@ -17,3 +17,7 @@ cargo install ${mod[@]}
 # https://github.com/rust-lang/rls
 rustup update
 rustup component add rls rust-analysis rust-src
+
+# Clippy is Rust format tools
+# https://github.com/rust-lang/rust-clippy
+rustup component add clippy
