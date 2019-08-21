@@ -4,10 +4,11 @@ if test ! $(which rustc); then
 fi
 
 # Install Cargo modules
-# cargo-edit
-# https://github.com/killercup/cargo-edit
+# cargo-edit: https://github.com/killercup/cargo-edit
+# wasm-pack: https://github.com/rustwasm/wasm-pack
 mod=(
-  cargo-edit 
+  cargo-edit
+  wasm-pack
 )
 
 echo "installing node modules..."
