@@ -5,9 +5,11 @@ fi
 
 # Install Cargo modules
 # cargo-edit: https://github.com/killercup/cargo-edit
+# cargo-generate: https://github.com/ashleygwilliams/cargo-generate
 # wasm-pack: https://github.com/rustwasm/wasm-pack
 mod=(
   cargo-edit
+  cargo-generate
   wasm-pack
 )
 
