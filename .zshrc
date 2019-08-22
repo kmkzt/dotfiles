@@ -111,6 +111,9 @@ alias dcclear='docker rm -f $(docker ps -aq)' # dockerのコンテナを一括�
 # サイトのリソースを調べるコマンド
 alias resne='research-network'
 
+# cargo
+alias cargo-init="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
+
 # peco
 function peco-src() {
     local src=$(ghq list --full-path | peco --query "$BUFFER")
