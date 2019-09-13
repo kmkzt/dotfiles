@@ -70,6 +70,8 @@ alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
+# shift-jisでの差分
+alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
 # commitizen https://github.com/commitizen/cz-cli
 alias gcz='git cz'
@@ -126,3 +128,10 @@ function peco-src() {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
