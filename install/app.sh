@@ -30,6 +30,7 @@ tools=(
   lazygit
   git-extras
   nkf
+  cmake
 )
 
 # Install apps to /Applications
