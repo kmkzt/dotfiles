@@ -53,8 +53,8 @@ export PATH=$PATH:$HOME/flutter/bin
 export PATH=$PATH:$HOME/.pub-cache/bin
 
 # Andoroid Studio
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
-export PATH="$PATH:$HOME/Library/Android/sdk/emulator"
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 
 # ssh
 alias sk='ssh-add -K'
