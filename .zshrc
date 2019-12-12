@@ -52,6 +52,9 @@ export PATH=$PATH:$HOME/flutter/bin
 # PUB: Dart Package Manager -> https://dart.dev/tools/pub/cmd/pub-global#running-a-script-from-your-path
 export PATH=$PATH:$HOME/.pub-cache/bin
 
+# JAVA
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
 # Andoroid Studio
 export ANDROID_HOME=$HOME/Library/Android
 export ANDROID_SDK_ROOT=$ANDROID_HOME/sdk
