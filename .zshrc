@@ -52,6 +52,10 @@ export PATH=$PATH:$HOME/flutter/bin
 # PUB: Dart Package Manager -> https://dart.dev/tools/pub/cmd/pub-global#running-a-script-from-your-path
 export PATH=$PATH:$HOME/.pub-cache/bin
 
+# Andoroid Studio
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+export PATH="$PATH:$HOME/Library/Android/sdk/emulator"
+
 # ssh
 alias sk='ssh-add -K'
 
