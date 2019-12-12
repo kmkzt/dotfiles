@@ -4,7 +4,8 @@ if test ! $(which go); then
 fi
 
 script=(
-  github.com/b4b4r07/gist 
+  github.com/b4b4r07/gist
+  github.com/skanehira/pst
 )
 
 echo "installing go script..."
