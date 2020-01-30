@@ -3,6 +3,10 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# install anyenv
+https://github.com/anyenv/anyenv
+eval "anyenv install --init"
+
 task=(
   app.sh
   aws.sh
@@ -12,7 +16,7 @@ task=(
   go.sh
   npm.sh
   rust.sh
+  tool.sh
 )
 
 zsh ${task[@]}
-

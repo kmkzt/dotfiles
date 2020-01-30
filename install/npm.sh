@@ -1,9 +1,9 @@
 
 if test ! $(which node); then
   echo "insalling node..."
-  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-  nvm install stable
-  nvm alias default stable
+  eval "$(anyenv install nodenv)"
+  eval "$(nodenv install latest)"
+  eval "$(nodenv global latest)"
 fi
 
 # Install Node modules

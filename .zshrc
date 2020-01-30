@@ -38,9 +38,6 @@ if [[ -x `which rbenv` ]]; then
     eval "$(pyenv init -)"
 fi
 
-# node
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
 
@@ -61,6 +58,12 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME/sdk
 export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# any env
+if [[ -x `which anyenv` ]]; then
+    export PATH=$HOME/.anyenv/bin:$PATH
+    eval "$(anyenv init -)"
+fi
 
 # ssh
 alias sk='ssh-add -K'
