@@ -16,7 +16,6 @@ task=(
   go.sh
   npm.sh
   rust.sh
-  tool.sh
 )
 
 zsh ${task[@]}
