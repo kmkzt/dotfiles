@@ -86,6 +86,9 @@ alias gdfn='git diff HEAD..HEAD^ --name-only'
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
+# node系のコマンド
+alias rmnm='rm -rf node_modules yarn.lock package-lock.json'
+
 # commitizen https://github.com/commitizen/cz-cli
 alias gcz='git cz'
 # https://github.com/github-changelog-generator/github-changelog-generator
