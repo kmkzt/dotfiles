@@ -31,6 +31,7 @@ tools=(
   git-extras
   nkf
   cmake
+  github/gh/gh
 )
 
 # Install apps to /Applications
