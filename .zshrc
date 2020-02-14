@@ -23,6 +23,13 @@ setopt nonomatch # escapt `no matches found.`
 # Github SSH
 ssh-add -K ~/.ssh/github
 
+# any env
+export PATH=$HOME/.anyenv/bin:$PATH
+
+# node
+export PATH=$HOME/.anyenv/envs/nodenv/bin:$PATH
+eval "$(nodenv init -)"
+
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -59,11 +66,7 @@ export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
-# any env
-if [[ -x `which anyenv` ]]; then
-    export PATH=$HOME/.anyenv/bin:$PATH
-    eval "$(anyenv init -)"
-fi
+
 
 # ssh
 alias sk='ssh-add -K'
