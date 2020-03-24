@@ -31,6 +31,7 @@ tools=(
   git-extras
   nkf
   cmake
+  tmux
 )
 
 # Install apps to /Applications
