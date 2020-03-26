@@ -22,37 +22,37 @@ call plug#begin('~/.vim/bundle')
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'junegunn/seoul256.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'junegunn/seoul256.vim'
+  Plugin 'junegunn/goyo.vim'
+  Plugin 'junegunn/limelight.vim'
+  " Syntax Plugin
+  Plugin 'leafgarland/typescript-vim'
+
+  " Prettier
+  Plugin 'prettier/vim-prettier', {
+    \ 'do': 'yarn install',
+    \ 'branch': 'release/1.x',
+    \ 'for': [
+      \ 'javascript',
+      \ 'typescript',
+      \ 'css',
+      \ 'less',
+      \ 'scss',
+      \ 'json',
+      \ 'graphql',
+      \ 'markdown',
+      \ 'vue',
+      \ 'lua',
+      \ 'php',
+      \ 'python',
+      \ 'ruby',
+      \ 'html',
+      \ 'swift' ] }
 call vundle#end()
 filetype plugin indent on
 syntax enable
 
-" Syntax Plugin
-Plugin 'leafgarland/typescript-vim'
-
-" Prettier
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
 " max line length that prettier will wrap on
 " Prettier default: 80
 let g:prettier#config#print_width = 80
@@ -101,4 +101,3 @@ let g:prettier#config#prose_wrap = 'preserve'
 
 " css|strict|ignore
 let g:prettier#config#html_whitespace_sensitivity = 'css'
-
