@@ -52,9 +52,9 @@ call vundle#begin()
   " Language server
   " https://github.com/prabirshrestha/vim-lsp
   " https://github.com/mattn/vim-lsp-settings
-  Plug 'prabirshrestha/async.vim'
-  Plug 'prabirshrestha/vim-lsp'
-  Plug 'mattn/vim-lsp-settings'
+  Plugin 'prabirshrestha/async.vim'
+  Plugin 'prabirshrestha/vim-lsp'
+  Plugin 'mattn/vim-lsp-settings'
 call vundle#end()
 filetype plugin indent on
 syntax enable
