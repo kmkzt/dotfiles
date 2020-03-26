@@ -23,7 +23,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
 
-   " Syntax Plugin
+  " Syntax Plugin
   Plug 'leafgarland/typescript-vim'
 
   " Prettier
