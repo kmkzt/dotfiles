@@ -18,19 +18,16 @@ endif
 
 " For Mac/Linux users
 call plug#begin('~/.vim/bundle')
+  " Theme
+  Plug 'junegunn/seoul256.vim'
+  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/limelight.vim'
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'junegunn/seoul256.vim'
-  Plugin 'junegunn/goyo.vim'
-  Plugin 'junegunn/limelight.vim'
-  " Syntax Plugin
-  Plugin 'leafgarland/typescript-vim'
+   " Syntax Plugin
+  Plug 'leafgarland/typescript-vim'
 
   " Prettier
-  Plugin 'prettier/vim-prettier', {
+  Plug 'prettier/vim-prettier', {
     \ 'do': 'yarn install',
     \ 'branch': 'release/1.x',
     \ 'for': [
@@ -49,15 +46,14 @@ call vundle#begin()
       \ 'ruby',
       \ 'html',
       \ 'swift' ] }
+  
   " Language server
   " https://github.com/prabirshrestha/vim-lsp
   " https://github.com/mattn/vim-lsp-settings
-  Plugin 'prabirshrestha/async.vim'
-  Plugin 'prabirshrestha/vim-lsp'
-  Plugin 'mattn/vim-lsp-settings'
-call vundle#end()
-filetype plugin indent on
-syntax enable
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+call plug#end()
 
 " DOCS -> https://github.com/junegunn/seoul256.vim
 " seoul256 (dark):
