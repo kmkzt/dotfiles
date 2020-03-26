@@ -49,9 +49,22 @@ call vundle#begin()
       \ 'ruby',
       \ 'html',
       \ 'swift' ] }
+  " Language server
+  " https://github.com/prabirshrestha/vim-lsp
+  " https://github.com/mattn/vim-lsp-settings
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
 call vundle#end()
 filetype plugin indent on
 syntax enable
+
+" DOCS -> https://github.com/junegunn/seoul256.vim
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+let g:seoul256_background = 236
+colo seoul256
 
 " max line length that prettier will wrap on
 " Prettier default: 80
