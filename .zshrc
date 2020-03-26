@@ -25,6 +25,7 @@ ssh-add -K ~/.ssh/github
 
 # any env
 export PATH=$HOME/.anyenv/bin:$PATH
+eval "$(anyenv init -)"
 
 # node
 export PATH=$HOME/.anyenv/envs/nodenv/bin:$PATH
@@ -40,7 +41,7 @@ if [[ -x `which rbenv` ]]; then
     eval "$(rbenv init -)"
 fi
 # Python
-if [[ -x `which rbenv` ]]; then
+if [[ -x `which pyenv` ]]; then
     export PATH=$HOME/.pyenv/shims:$PATH
     eval "$(pyenv init -)"
 fi
@@ -65,8 +66,6 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME/sdk
 export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-
 
 # ssh
 alias sk='ssh-add -K'
