@@ -4,7 +4,7 @@ if test ! $(which brew); then
 fi
 
 # install anyenv
-https://github.com/anyenv/anyenv
+git clone https://github.com/anyenv/anyenv ~/.anyenv
 eval "anyenv install --init"
 
 task=(

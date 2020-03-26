@@ -32,6 +32,7 @@ tools=(
   nkf
   cmake
   github/gh/gh
+  tmux
 )
 
 # Install apps to /Applications
