@@ -148,7 +148,7 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 #function repeat
-repeat() {
+function repeat() {
     number=$1
     shift
     for i in `seq $number`; do
