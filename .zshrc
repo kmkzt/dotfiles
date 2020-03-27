@@ -91,6 +91,10 @@ alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | les
 # node系のコマンド
 alias rmnm='rm -rf node_modules yarn.lock package-lock.json'
 
+# docker
+alias d='docker'
+alias dc='docker-compose'
+
 # commitizen https://github.com/commitizen/cz-cli
 alias gcz='git cz'
 # https://github.com/github-changelog-generator/github-changelog-generator
