@@ -160,6 +160,16 @@ function repeat() {
     done
 }
 
+# init .gitignore
+# curl https://gitignore.io/api/node,rust
+function init-gitignore() {
+    if [ $# == 0 ]; then
+        echo 'Usage: get_gitignore.sh node,rust'
+        exit 1
+    fi
+    curl https://gitignore.io/api/$1 > .gitignore
+}
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/kazuto.kamei/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
