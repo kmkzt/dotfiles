@@ -3,7 +3,7 @@ if test ! $(which rustc); then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
-# Install Cargo modules
+# Cargo modules
 # cargo-edit: https://github.com/killercup/cargo-edit
 # cargo-generate: https://github.com/ashleygwilliams/cargo-generate
 # wasm-pack: https://github.com/rustwasm/wasm-pack
@@ -13,14 +13,13 @@ mod=(
   wasm-pack
 )
 
-echo "installing node modules..."
+echo "installing cargo modules..."
 cargo install ${mod[@]}
 
-# IDE Plugins
-# https://github.com/rust-lang/rls
+# update version
 rustup update
-rustup component add rls rust-analysis rust-src
 
-# Clippy is Rust format tools
-# https://github.com/rust-lang/rust-clippy
-rustup component add clippy
+# language server: https://github.com/rust-lang/rls
+# formatter:  https://github.com/rust-lang/rust-clippy
+rustup component add rls rust-analysis rust-src clippy
+
