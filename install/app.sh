@@ -24,6 +24,7 @@ tools=(
   tmux
   hub
   nvim
+  peco
 )
 
 # Install apps to /Applications

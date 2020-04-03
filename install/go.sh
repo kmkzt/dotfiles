@@ -8,6 +8,7 @@ script=(
   github.com/skanehira/pst
   github.com/itchyny/mmv/cmd/mmv
 	github.com/mattn/files
+  github.com/x-motemen/ghq
 )
 
 echo "installing go script..."
