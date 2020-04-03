@@ -7,6 +7,7 @@ set smartindent
 set ignorecase 
 set smartcase
 set wrapscan
+set hidden
 filetype plugin on
 
 " nvim plug
@@ -56,8 +57,11 @@ if dein#load_state('~/.cache/dein')
     call dein#add('prabirshrestha/vim-lsp')
     call dein#add('mattn/vim-lsp-settings')
 
+    " Rust
 		call dein#add('rust-lang/rust.vim')
-    " Syntax Plugin
+    call dein#add('racer-rust/vim-racer')
+
+    " TypeScript
     call dein#add('leafgarland/typescript-vim')
 
     " snipet tools
@@ -129,8 +133,16 @@ let g:prettier#config#html_whitespace_sensitivity = 'css'
 " https://github.com/Shougo/deoplete.nvim
 let g:deoplete#enable_at_startup = 1
 
+" Rust
+" rust-fmt: 
 " https://github.com/rust-lang/rustfmt
 let g:rustfmt_autosave = 1
+" rust-racer
+" https://github.com/racer-rust/racer
+" https://github.com/racer-rust/vim-racer
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
 
 " netrw: default filer
 let g:netrw_liststyle=1
