@@ -16,23 +16,14 @@ echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 # Apps
-# FPP: https://github.com/facebook/PathPicker
-# nkf: https://github.com/nurse/nkf
 tools=(
   lsd
   gawk
-  ripgrep
-  pandoc
-  poppler
-  tesseract
-  ffmpeg
-  fpp
-  lazygit
-  git-extras
-  nkf
   cmake
   github/gh/gh
   tmux
+  hub
+  nvim
 )
 
 # Install apps to /Applications
