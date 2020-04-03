@@ -8,3 +8,6 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 # For example, we just use `~/.cache/dein` as installation directory
 sh ./installer.sh ~/.cache/dein
 rm ./installer.sh
+
+# https://github.com/Shougo/deoplete.nvim
+pip3 install --user pynvim
