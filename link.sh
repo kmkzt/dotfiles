@@ -1,9 +1,15 @@
-# custom path
-# ln -sf ~/Documents/githun.com/kmkzt/dotfiles ~/.zprofile
+#!/bin/sh
 
-ln -sf ~/go/src/github.com/kmkzt/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/go/src/github.com/kmkzt/dotfiles/.zprofile ~/.zprofile
-ln -sf ~/go/src/github.com/kmkzt/dotfiles/.vimrc ~/.vimrc
+DOTFILES_PATH=$(pwd);
+echo "load dotfiles: $DOTFILES_PATH"
 
-# https://github.com/commitizen/cz-cli
-ln -sf ~/go/src/github.com/kmkzt/dotfiles/.czrc ~/.czrc
+# zsh
+ln -sf $DOTFILES_PATH/config/.zshrc ~/.zshrc
+# ln -sf $DOTFILES_PATH/.zprofile ~/.zprofile
+
+# vim
+ln -sf $DOTFILES_PATH/config/.vimrc ~/.vimrc
+ln -sf $DOTFILES_PATH/config/nvim/init.vim ~/.config/nvim/init.vim
+
+# commitizen: https://github.com/commitizen/cz-cli
+ln -sf $DOTFILES_PATH/config/.czrc ~/.czrc
