@@ -7,6 +7,7 @@ set smartindent
 set ignorecase 
 set smartcase
 set wrapscan
+filetype plugin on
 
 " nvim plug
 if &compatible
@@ -130,3 +131,10 @@ let g:deoplete#enable_at_startup = 1
 
 " https://github.com/rust-lang/rustfmt
 let g:rustfmt_autosave = 1
+
+" netrw: default filer
+let g:netrw_liststyle=1
+let g:netrw_banner=0
+let g:netrw_sizestyle="H"
+let g:netrw_timefmt="%Y-%m-%d %a %H:%M:%S"
+let g:netrw_preview=1
