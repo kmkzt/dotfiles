@@ -13,7 +13,8 @@ fi
 mod=(
   yarn
   ts-node
-  typescript
+	typescript
+ 	typescript-language-server
   casperjs
   webpack
   commitizen
