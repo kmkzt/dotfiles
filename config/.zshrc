@@ -119,11 +119,16 @@ alias hifile='defaults write com.apple.finder AppleShowAllFiles FALSE && killall
 # 翻訳するコマンド(REPL) 
 # TODO: https://github.com/soimort/translate-shell の設定
 alias trans='gawk -f <(curl -Ls git.io/translate) -- -shell'
+# 英語の校正ツール https://github.com/btford/write-good
+alias wg='write-good'
+
+# vim 
+alias vi='nvim'
+alias vim='nvim'
+alias vvim='/usr/bin/vim'
 
 # https://github.com/Peltoche/lsd
 alias ls='lsd'
-# 英語の校正ツール https://github.com/btford/write-good
-alias wg='write-good'
 
 # ポートデバッグ
 alias findport='lsof -i -P | grep '
