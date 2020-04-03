@@ -21,5 +21,4 @@ rustup update
 
 # language server: https://github.com/rust-lang/rls
 # formatter:  https://github.com/rust-lang/rust-clippy
-rustup component add rls rust-analysis rust-src clippy
-
+rustup component add rls rust-analysis rust-src rust-fmt clippy
