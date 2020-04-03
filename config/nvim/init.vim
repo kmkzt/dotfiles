@@ -1,12 +1,7 @@
-set runtimepath^=~/.vim 
-" set runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
-" default config
+" default config 
 set number 
 set title 
 set showmatch
-syntax on 
 set tabstop=2
 set smartindent 
 set ignorecase 
@@ -18,22 +13,19 @@ if &compatible
   set nocompatible
 endif
 
+" neovim config
+set runtimepath^=~/.vim 
+" set runtimepath+=~/.vim/after
+
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+let &packpath = &runtimepath
 
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
-
-    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-    call dein#add('Shougo/deoplete.nvim')
-    
+		call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
     " Theme
-    call dein#add('junegunn/seoul256.vim')
-    call dein#add('junegunn/goyo.vim')
-    call dein#add('junegunn/limelight.vim')
-
-    " Syntax Plugin
-    call dein#add('leafgarland/typescript-vim')
+    call dein#add('altercation/vim-colors-solarized')
 
     " Prettier
     call dein#add('prettier/vim-prettier', {
@@ -63,21 +55,26 @@ if dein#load_state('~/.cache/dein')
     call dein#add('prabirshrestha/vim-lsp')
     call dein#add('mattn/vim-lsp-settings')
 
+		call dein#add('rust-lang/rust.vim')
+    " Syntax Plugin
+    call dein#add('leafgarland/typescript-vim')
+
+    " snipet tools
+    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('lighttiger2505/deoplete-vim-lsp')
+
     if !has('nvim')
       call dein#add('roxma/nvim-yarp')
       call dein#add('roxma/vim-hug-neovim-rpc')
     endif
-
   call dein#end()
 call dein#save_state()
 endif
 
-" DOCS -> https://github.com/junegunn/seoul256.vim
-" seoul256 (dark):
-"   Range:   233 (darkest) ~ 239 (lightest)
-"   Default: 237
-let g:seoul256_background = 236
-colo seoul256
+" theme: https://github.com/altercation/vim-colors-solarized
+colorscheme solarized
+let g:solarized_termcolors=256
+syntax enable
 
 " max line length that prettier will wrap on
 " Prettier default: 80
@@ -127,3 +124,9 @@ let g:prettier#config#prose_wrap = 'preserve'
 
 " css|strict|ignore
 let g:prettier#config#html_whitespace_sensitivity = 'css'
+
+" https://github.com/Shougo/deoplete.nvim
+let g:deoplete#enable_at_startup = 1
+
+" https://github.com/rust-lang/rustfmt
+let g:rustfmt_autosave = 1
