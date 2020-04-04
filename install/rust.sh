@@ -19,7 +19,9 @@ mod=(
   cargo-edit
   cargo-generate
   wasm-pack
+  starship
 )
+
 
 echo "installing cargo modules..."
 cargo install ${mod[@]}
