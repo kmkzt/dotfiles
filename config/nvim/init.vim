@@ -81,6 +81,9 @@ colorscheme solarized
 let g:solarized_termcolors=256
 syntax enable
 
+" prettier autoformat
+let g:prettier#autoformat = 1
+
 " max line length that prettier will wrap on
 " Prettier default: 80
 let g:prettier#config#print_width = 80
