@@ -20,6 +20,7 @@ mod=(
   cargo-generate
   wasm-pack
   starship
+	bat
 )
 
 
