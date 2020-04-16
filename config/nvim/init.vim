@@ -74,7 +74,6 @@ if dein#load_state('~/.cache/dein')
 		call dein#add('mattn/webapi-vim')
 		call dein#add('mattn/vim-gist', {'depends': 'mattn/webapi-vim'})
 
-
     if !has('nvim')
       call dein#add('roxma/nvim-yarp')
       call dein#add('roxma/vim-hug-neovim-rpc')
@@ -162,4 +161,4 @@ let g:netrw_timefmt="%Y-%m-%d %a %H:%M:%S"
 let g:netrw_preview=1
 
 " https://github.com/mattn/vim-gist
-let g:gist_use_password_in_gitconfig = 1
+ let g:gist_clip_command = 'pbcopy'
