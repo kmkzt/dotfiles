@@ -142,7 +142,7 @@ alias resne='research-network'
 
 # start wasm-pack project
 # https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/getting-started.html
-alias init-wasm="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
+alias init-wasmpack="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
 
 # peco
 function peco-src() {
@@ -158,9 +158,8 @@ bindkey '^]' peco-src
 
 #function repeat
 function repeat() {
-    number=$1
     shift
-    for i in `seq $number`; do
+    for i in `seq $1`; do
       $@
     done
 }
