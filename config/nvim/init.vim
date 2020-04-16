@@ -68,6 +68,13 @@ if dein#load_state('~/.cache/dein')
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('lighttiger2505/deoplete-vim-lsp')
 
+    " Gist tools
+    call dein#add('autoload/gist.vim')
+		call dein#add('plugin/gist.vim')
+		call dein#add('mattn/webapi-vim')
+		call dein#add('mattn/vim-gist', {'depends': 'mattn/webapi-vim'})
+
+
     if !has('nvim')
       call dein#add('roxma/nvim-yarp')
       call dein#add('roxma/vim-hug-neovim-rpc')
@@ -153,3 +160,6 @@ let g:netrw_banner=0
 let g:netrw_sizestyle="H"
 let g:netrw_timefmt="%Y-%m-%d %a %H:%M:%S"
 let g:netrw_preview=1
+
+" https://github.com/mattn/vim-gist
+let g:gist_use_password_in_gitconfig = 1
