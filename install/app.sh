@@ -25,6 +25,7 @@ tools=(
   hub
   nvim
   peco
+  translate-shell
 )
 
 # Install apps to /Applications
