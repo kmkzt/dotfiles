@@ -26,8 +26,12 @@ tools=(
   nvim
   peco
   translate-shell
+  git-extras
 )
 
 # Install apps to /Applications
 echo "installing　tools ..."
 brew install ${tools[@]}
+
+# Git install
+brew install git; brew link --overwrite git
