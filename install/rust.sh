@@ -19,6 +19,7 @@ mod=(
   cargo-edit
   cargo-generate
   wasm-pack
+  deno
   starship
 	bat
 )
