@@ -85,6 +85,8 @@ alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
+# commitizen https://github.com/commitizen/cz-cli
+alias gcz='git cz --disable-emoji'
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
@@ -95,8 +97,7 @@ alias rmnm='rm -rf node_modules yarn.lock package-lock.json'
 alias d='docker'
 alias dc='docker-compose'
 
-# commitizen https://github.com/commitizen/cz-cli
-alias gcz='git cz'
+
 # https://github.com/github-changelog-generator/github-changelog-generator
 alias ghcg="github_changelog_generator"
 
