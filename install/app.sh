@@ -27,6 +27,7 @@ tools=(
   peco
   translate-shell
   git-extras
+  minikube
 )
 
 # Install apps to /Applications
