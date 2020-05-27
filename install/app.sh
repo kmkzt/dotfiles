@@ -20,13 +20,10 @@ tools=(
   lsd
   gawk
   cmake
-  github/gh/gh
   tmux
-  hub
   nvim
   peco
   translate-shell
-  git-extras
   minikube
 )
 

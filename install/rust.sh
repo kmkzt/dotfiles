@@ -12,9 +12,6 @@ rustup component add rls rust-analysis rust-src rust-fmt clippy
 rustup toolchain add nightly
 
 # Cargo modules
-# cargo-edit: https://github.com/killercup/cargo-edit
-# cargo-generate: https://github.com/ashleygwilliams/cargo-generate
-# wasm-pack: https://github.com/rustwasm/wasm-pack
 mod=(
   cargo-edit
   cargo-generate
