@@ -3,8 +3,8 @@ tools=(
   git
   github/gh/gh
   git-extras
+  git-delta
   hub
-  delta
 )
 
 # Install apps to /Applications
