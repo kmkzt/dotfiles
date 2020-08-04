@@ -25,6 +25,7 @@ tools=(
   peco
   translate-shell
   minikube
+  telnet
 )
 
 # Install apps to /Applications
