@@ -47,7 +47,8 @@ if [[ -x `which pyenv` ]]; then
 fi
 
 # Rust
-export PATH=$HOME/.cargo/bin:$PATH
+source ~/.cargo/env
+# export PATH=$HOME/.cargo/bin:$PATH
 
 # Flutter
 # Docs -> https://flutter.dev/docs/get-started/install/macos
