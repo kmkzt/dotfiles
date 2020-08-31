@@ -91,8 +91,10 @@ alias gcz='git cz --disable-emoji'
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
-# node系のコマンド
-alias rmnm='rm -rf node_modules yarn.lock package-lock.json'
+# node_modulesの容量確認・削除
+alias check_nm="find . -name \"node_modules\" -type d -prune -print | xargs du -chs;"
+alias rm_nm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
+
 
 # docker
 alias d='docker'
