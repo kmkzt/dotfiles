@@ -68,8 +68,8 @@ export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
 export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
-# ssh
-alias sk='ssh-add -K'
+# https://github.com/starship/starship
+eval "$(starship init zsh)"
 
 # Git command
 alias gad='git add'
@@ -91,19 +91,8 @@ alias gcz='git cz --disable-emoji'
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
-# node_modulesの容量確認・削除
-alias check_nm="find . -name \"node_modules\" -type d -prune -print | xargs du -chs;"
-alias rm_nm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
-
-
-# docker
-alias d='docker'
-alias dc='docker-compose'
-
-
 # https://github.com/github-changelog-generator/github-changelog-generator
 alias ghcg="github_changelog_generator"
-
 # fork元を操作するコマンド
 alias gaup='git remote add upstream'
 alias gfup='git fetch upstream'
@@ -111,6 +100,17 @@ alias gmup='git merge upstream/master'
 # lazygit
 # https://github.com/jesseduffield/lazygit
 alias lg='lazygit'
+
+# docker
+alias d='docker'
+alias dc='docker-compose'
+# docker command
+alias dcache-clear="docker system prune; rm ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2" # 不要コンテナ・キャッシュ削除
+
+# Node
+# node_modulesの容量確認・削除
+alias check_nm="find . -name \"node_modules\" -type d -prune -print | xargs du -chs;"
+alias rm_nm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
@@ -136,17 +136,7 @@ alias ls='lsd'
 
 # ポートデバッグ
 alias findport='lsof -i -P | grep '
-alias killport='kill -9 '
-
-# docker command
-alias dcclear='docker rm -f $(docker ps -aq)' # dockerのコンテナを一括削除
-
-# サイトのリソースを調べるコマンド
-alias resne='research-network'
-
-# start wasm-pack project
-# https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/getting-started.html
-alias init-wasmpack="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
+alias killprocess='kill -9 '
 
 # peco
 function peco-src() {
@@ -177,6 +167,3 @@ function init-gitignore() {
     fi
     curl https://gitignore.io/api/$1 > .gitignore
 }
-
-# https://github.com/starship/starship
-eval "$(starship init zsh)"
