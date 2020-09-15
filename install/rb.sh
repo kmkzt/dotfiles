@@ -6,4 +6,4 @@ mod=(
 )
 
 echo "installing gem..."
-sudo gem gel ${mod[@]}
+sudo gem install ${mod[@]}
