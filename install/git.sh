@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Apps
 tools=(
   git

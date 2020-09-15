@@ -64,9 +64,10 @@ if dein#load_state('~/.cache/dein')
     " TypeScript
     call dein#add('leafgarland/typescript-vim')
 
-    " snipet tools
-    call dein#add('Shougo/deoplete.nvim')
-    call dein#add('lighttiger2505/deoplete-vim-lsp')
+    " TODO: Fix. 
+		" snipet tools
+		" call dein#add('Shougo/deoplete.nvim')
+    " call dein#add('lighttiger2505/deoplete-vim-lsp')
 
     " Gist tools
     call dein#add('autoload/gist.vim')
@@ -142,8 +143,9 @@ let g:prettier#config#prose_wrap = 'preserve'
 " css|strict|ignore
 let g:prettier#config#html_whitespace_sensitivity = 'css'
 
+" TODO: fix config
 " https://github.com/Shougo/deoplete.nvim
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 " Rust
 " rust-fmt: 

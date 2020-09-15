@@ -138,8 +138,11 @@ alias ls='lsd'
 alias findport='lsof -i -P | grep '
 alias killprocess='kill -9 '
 
+# debug brew: https://stackoverflow.com/questions/39797078/another-active-homebrew-process-is-already-in-progress
+alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
+
 # peco
-function peco-src() {
+function peco-cd-repo() {
     local src=$(ghq list --full-path | peco --query "$BUFFER")
     if [ -n "$src" ]; then
         BUFFER="cd $src"
@@ -147,10 +150,10 @@ function peco-src() {
     fi 
     zle -R -c
 }
-zle -N peco-src
-bindkey '^]' peco-src
+zle -N peco-cd-repo
+bindkey '^]' peco-cd-repo
 
-#function repeat
+# repeat 
 function repeat() {
     shift
     for i in `seq $1`; do

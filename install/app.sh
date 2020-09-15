@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Install Brew Cask
 echo "Installing brew cask..."
 brew install caskroom/cask/brew-cask
@@ -26,6 +28,7 @@ tools=(
   translate-shell
   minikube
   telnet
+  watchman
 )
 
 # Install apps to /Applications

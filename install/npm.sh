@@ -12,16 +12,12 @@ fi
 # Install Node modules
 mod=(
   yarn
-  ts-node
-	typescript
  	typescript-language-server
-  casperjs
-  webpack
   commitizen
   cz-conventional-changelog
   write-good
   lighthouse
-  research-network
+  expo-cli
 )
 
 echo "installing node modules..."
