@@ -20,10 +20,11 @@ brew cask install --appdir="/Applications" ${apps[@]}
 # Apps
 tools=(
   lsd
-  gawk
   cmake
   tmux
+  gawk
   nvim
+	fzf
   peco
   translate-shell
   minikube
@@ -36,4 +37,5 @@ echo "installing　tools ..."
 brew install ${tools[@]}
 
 # Git install
-brew install git; brew link --overwrite git
+brew install git
+brew link --overwrite git

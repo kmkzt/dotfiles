@@ -40,6 +40,11 @@ if [[ -x `which rbenv` ]]; then
     export PATH=$HOME/.rbenv/shims:$PATH
     eval "$(rbenv init -)"
 fi
+
+# Gem
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # Python
 if [[ -x `which pyenv` ]]; then
     export PATH=$HOME/.pyenv/shims:$PATH
@@ -170,3 +175,4 @@ function init-gitignore() {
     fi
     curl https://gitignore.io/api/$1 > .gitignore
 }
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
