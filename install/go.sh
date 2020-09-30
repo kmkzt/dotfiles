@@ -5,11 +5,12 @@ if test ! $(which go); then
   brew install go
 fi
 
-script=(
-  github.com/itchyny/mmv/cmd/mmv
+tools=(
+	github.com/itchyny/mmv/cmd/mmv
 	github.com/mattn/files
-  github.com/x-motemen/ghq
+  	github.com/x-motemen/ghq
+	golang.org/x/tools/gopls
 )
 
 echo "installing go script..."
-go get ${script[@]}
+go get -u -v -t ${script[@]}
