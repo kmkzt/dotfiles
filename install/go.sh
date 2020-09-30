@@ -12,5 +12,5 @@ tools=(
 	golang.org/x/tools/gopls
 )
 
-echo "installing go script..."
+echo "installing go tools..."
 go get -u -v -t ${script[@]}
