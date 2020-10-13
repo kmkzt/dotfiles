@@ -67,11 +67,10 @@ export PATH=$PATH:$HOME/.pub-cache/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 # Andoroid Studio
-export ANDROID_HOME=$HOME/Library/Android
-export ANDROID_SDK_ROOT=$ANDROID_HOME/sdk
-export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
-export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
-export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
+export ANDROID_SDK=$$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK/tools/bin:$PATH
+export PATH=$ANDROID_SDK/emulator:$PATH
+export PATH=$ANDROID_SDK/platform-tools:$PATH
 
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
