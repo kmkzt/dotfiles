@@ -1,0 +1,27 @@
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+	whitespace = fix
+	ignorecase = false
+[user]
+	name = kmkzt
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
+[commit]
+	template = ~/.stCommitMsg
+[ghq]
+	root = ~/go/src
+[merge]
+	ff = true
+[pull]
+	ff = only
+[pager]
+	diff = delta --color-only --theme='Monokai Extended'
+[interactive]
+	diffFilter = delta --color-only
+[color]
+	ui = true
+[push]
+	default = simple
+[github]
+	user = kmkzt
