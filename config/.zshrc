@@ -71,6 +71,7 @@ export ANDROID_SDK=$HOME/Library/Android/sdk
 export PATH=$ANDROID_SDK/tools/bin:$PATH
 export PATH=$ANDROID_SDK/emulator:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
+alias adb='$ANDROID_SDK/platform-tools/adb'
 
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
@@ -145,19 +146,33 @@ alias killprocess='kill -9 '
 # debug brew: https://stackoverflow.com/questions/39797078/another-active-homebrew-process-is-already-in-progress
 alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
-# peco
-function peco-cd-repo() {
+# change directory repository
+function cd-repo() {
     local src=$(ghq list --full-path | peco --query "$BUFFER")
     if [ -n "$src" ]; then
-        BUFFER="cd $src"
-        zle accept-line
+        local COMMAND="cd $src"
+        echo $COMMAND
+        eval $COMMAND
     fi 
-    zle -R -c
 }
-zle -N peco-cd-repo
-bindkey '^]' peco-cd-repo
+zle -N cd-repo
+bindkey '^]' cd-repo
 
-# repeat 
+# Find the directory you want to move
+function cd-list() {
+    if [ $# == 0 ]; then
+        echo 'Usage: cd-list ../'
+       return
+    fi
+    local dir=$(ls -1 $1 | peco --query "$BUFFER")
+    if [ -n "$dir" ]; then
+        local COMMAND="cd $1$dir"
+        echo $COMMAND
+        eval $COMMAND
+    fi 
+}
+
+# Repeat script
 function repeat() {
     shift
     for i in `seq $1`; do
@@ -169,9 +184,8 @@ function repeat() {
 # curl https://gitignore.io/api/node,rust
 function init-gitignore() {
     if [ $# == 0 ]; then
-        echo 'Usage: get_gitignore.sh node,rust'
-        exit 1
+        echo 'Usage: init-gitignore node,rust'
+        return
     fi
     curl https://gitignore.io/api/$1 > .gitignore
 }
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
