@@ -7,7 +7,7 @@ fi
 
 # install anyenv
 git clone https://github.com/anyenv/anyenv ~/.anyenv
-eval "anyenv install --init"
+eval "$(anyenv init -)"
 
 task=(
   app.sh
@@ -21,4 +21,4 @@ task=(
   rust.sh
 )
 
-zsh ${task[@]}
+zsh ./${task[@]}

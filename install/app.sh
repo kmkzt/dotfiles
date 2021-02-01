@@ -15,7 +15,7 @@ apps=(
 
 # Install apps to /Applications
 echo "installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 # Apps
 tools=(
@@ -24,8 +24,9 @@ tools=(
   tmux
   gawk
   nvim
-	fzf
+  fzf
   peco
+  ghq
   translate-shell
   minikube
   telnet

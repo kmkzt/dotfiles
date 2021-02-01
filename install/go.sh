@@ -8,7 +8,6 @@ fi
 tools=(
 	github.com/itchyny/mmv/cmd/mmv
 	github.com/mattn/files
-  	github.com/x-motemen/ghq
 	github.com/Arkweid/lefthook
 	golang.org/x/tools/gopls
 )

@@ -11,6 +11,7 @@ fi
 # Install gem
 mod=(
   cocoapods
+  commander
 )
 
 echo "Installing gem..."

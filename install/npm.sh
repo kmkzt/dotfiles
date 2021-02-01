@@ -18,6 +18,7 @@ mod=(
   write-good
   lighthouse
   expo-cli
+  firebase-tools
 )
 
 echo "installing node modules..."

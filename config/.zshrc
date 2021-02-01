@@ -36,8 +36,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Ruby
+export PATH=$HOME/.rbenv/shims:$PATH
 if [[ -x `which rbenv` ]]; then
-    export PATH=$HOME/.rbenv/shims:$PATH
     eval "$(rbenv init -)"
 fi
 
@@ -46,8 +46,10 @@ export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 
 # Python
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+
 if [[ -x `which pyenv` ]]; then
-    export PATH=$HOME/.pyenv/shims:$PATH
     eval "$(pyenv init -)"
 fi
 
