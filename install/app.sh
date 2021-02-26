@@ -9,6 +9,7 @@ brew install caskroom/cask/brew-cask
 apps=(
   google-chrome
   firefox
+  virtualbox
   visual-studio-code
   gifcapture
 )
