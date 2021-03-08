@@ -94,7 +94,7 @@ alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
 # commitizen https://github.com/commitizen/cz-cli
-alias gcz='git cz --disable-emoji'
+alias gcz='git cz'
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
@@ -118,6 +118,8 @@ alias dcache-clear="docker system prune; rm ~/Library/Containers/com.docker.dock
 # node_modulesの容量確認・削除
 alias check_nm="find . -name \"node_modules\" -type d -prune -print | xargs du -chs;"
 alias rm_nm="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
+# renovateの設定が合っているかを確認する
+alias check_renovate="npx --package renovate -c 'renovate-config-validator'"
 
 # 隠しファイル表示切り替え
 alias vifile='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
@@ -163,8 +165,8 @@ bindkey '^]' cd-repo
 # Find the directory you want to move
 function cd-list() {
     if [ $# == 0 ]; then
-        echo 'Usage: cd-list ../'
-       return
+				echo 'Usage: cd-list ../'
+				return
     fi
     local dir=$(ls -1 $1 | peco --query "$BUFFER")
     if [ -n "$dir" ]; then
