@@ -152,7 +152,7 @@ alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
 # change directory repository
 function cd-repo() {
-    local src=$(ghq list --full-path | peco --query "$BUFFER")
+    local src="$(ghq list --full-path | peco --query "$BUFFER")"
     if [ -n "$src" ]; then
         local COMMAND="cd $src"
         echo $COMMAND
@@ -163,16 +163,31 @@ zle -N cd-repo
 bindkey '^]' cd-repo
 
 # Find the directory you want to move
-function cd-list() {
-    if [ $# == 0 ]; then
-				echo 'Usage: cd-list ../'
-				return
+function cdl() {
+    if [ $# -gt 1 ]; then
+        echo 'Usage: cdl ../'
+        return
     fi
-    local dir=$(ls -1 $1 | peco --query "$BUFFER")
-    if [ -n "$dir" ]; then
-        local COMMAND="cd $1$dir"
-        echo $COMMAND
-        eval $COMMAND
+
+    local base='./'
+    if [ $# = 1 ]; then
+        base=$1
+    fi 
+    local path=$(ls -1a $base | peco --query "$BUFFER")
+    if [ -n "$path" ]; then
+        local selected="$base$path"
+        local type=$(/usr/bin/file -b $selected)
+        if [ $type = 'directory' ]; then
+            cd $selected
+            return
+        fi 
+        if [ "`echo $type | /usr/bin/grep 'text'`" ]; then
+            # TODO: Open file
+            echo "code $selected"
+            return
+        fi
+        echo "cannot open $type: $selected"
+        return
     fi 
 }
 
