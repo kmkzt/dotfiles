@@ -151,7 +151,7 @@ alias killprocess='kill -9 '
 alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
 # change directory repository
-alias cogh='cd "`ghq root`/`ghq list | peco`"'
+alias cogh='code "`ghq root`/`ghq list | peco`"'
 function cd-repo {
     cogh
 }
