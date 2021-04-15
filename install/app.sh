@@ -12,6 +12,7 @@ apps=(
   virtualbox
   visual-studio-code
   gifcapture
+  docker
 )
 
 # Install apps to /Applications
