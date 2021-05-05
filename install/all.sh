@@ -9,6 +9,11 @@ fi
 git clone https://github.com/anyenv/anyenv ~/.anyenv
 eval "$(anyenv init -)"
 
+# anyenv update plugin
+mkdir -p $(anyenv root)/plugins
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+
+
 task=(
   app.sh
   aws.sh
