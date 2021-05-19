@@ -33,6 +33,7 @@ tools=(
   minikube
   telnet
   watchman
+  deno
 )
 
 # Install apps to /Applications
