@@ -67,6 +67,7 @@ export PATH=$PATH:$HOME/.pub-cache/bin
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export PATH=/usr/local/opt/openjdk@11/bin:$PATH
 
 # Andoroid Studio
 export ANDROID_SDK=$HOME/Library/Android/sdk
