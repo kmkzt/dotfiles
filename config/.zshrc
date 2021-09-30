@@ -152,10 +152,15 @@ alias killprocess='kill -9 '
 alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
 # change directory repository
-alias cogh='code "`ghq root`/`ghq list | peco`"'
-function cd-repo {
-    cogh
+function cd-repo() {
+    local src=$(ghq list --full-path | peco --query "$BUFFER")
+    if [ -n "$src" ]; then
+        BUFFER="cd $src"
+        zle accept-line
+    fi 
+    zle -R -c
 }
+
 zle -N cd-repo
 bindkey '^]' cd-repo
 
