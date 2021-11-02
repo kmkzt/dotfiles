@@ -34,6 +34,7 @@ tools=(
   telnet
   watchman
   deno
+  graphviz
 )
 
 # Install apps to /Applications
