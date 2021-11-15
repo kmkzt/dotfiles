@@ -21,7 +21,7 @@ bindkey "^N" history-beginning-search-forward-end
 setopt nonomatch # escapt `no matches found.` 
 
 # Github SSH
-ssh-add -K ~/.ssh/github
+ssh-add --apple-use-keychain ~/.ssh/github
 
 # any env
 export PATH=$HOME/.anyenv/bin:$PATH
