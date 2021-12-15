@@ -95,7 +95,8 @@ alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
 # commitizen https://github.com/commitizen/cz-cli
-alias gcz='git cz'
+alias gcz='git-cz --disable-emoji' 
+
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
 
