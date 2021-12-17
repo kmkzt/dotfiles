@@ -35,6 +35,7 @@ tools=(
   watchman
   deno
   graphviz
+  jq
 )
 
 # Install apps to /Applications
