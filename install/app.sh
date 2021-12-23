@@ -13,6 +13,7 @@ apps=(
   visual-studio-code
   gifcapture
   docker
+  libpg
 )
 
 # Install apps to /Applications

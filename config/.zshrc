@@ -76,6 +76,9 @@ export PATH=$ANDROID_SDK/emulator:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
 alias adb='$ANDROID_SDK/platform-tools/adb'
 
+# libpg
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
 
