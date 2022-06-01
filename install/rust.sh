@@ -7,11 +7,8 @@ fi
 
 # update version
 rustup update
-
-# language server: https://github.com/rust-lang/rls
-# formatter:  https://github.com/rust-lang/rust-clippy
 rustup component add rls rust-analysis rust-src rust-fmt clippy
-rustup toolchain add nightly
+rustup toolchain install nightly
 
 # Cargo modules
 mod=(
@@ -26,6 +23,3 @@ mod=(
 
 echo "installing cargo modules..."
 cargo install ${mod[@]}
-
-# nightly install
-cargo +nightly install racer
