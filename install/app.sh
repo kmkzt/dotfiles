@@ -1,19 +1,11 @@
 #!/bin/sh
 
-# Install Brew Cask
-echo "Installing brew cask..."
-brew install caskroom/cask/brew-cask
-
 # Apps
 # GifCapture: https://github.com/onmyway133/GifCapture
 apps=(
   google-chrome
   firefox
-  virtualbox
   visual-studio-code
-  gifcapture
-  docker
-  libpg
 )
 
 # Install apps to /Applications
