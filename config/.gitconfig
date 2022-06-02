@@ -1,27 +1,30 @@
+[includeIf "gitdir:~/go/src/github.com/"]
+	path = ~/.gitconfig-github
 [core]
+    pager = delta
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 	whitespace = fix
 	ignorecase = false
-[user]
-	name = kmkzt
-[url "git@github.com:"]
-	pushinsteadof = https://github.com/
 [commit]
 	template = ~/.stCommitMsg
-[ghq]
-	root = ~/go/src
 [merge]
 	ff = true
+    conflictstyle = diff3
 [pull]
 	ff = only
+[push]
+	default = simple
 [pager]
-	diff = delta --color-only --theme='Monokai Extended'
+	diff = delta --color-only
+[diff]
+    colorMoved = default
 [interactive]
 	diffFilter = delta --color-only
 [color]
 	ui = true
-[push]
-	default = simple
-[github]
-	user = kmkzt
+[ghq]
+	root = ~/go/src
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
