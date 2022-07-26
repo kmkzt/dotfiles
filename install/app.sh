@@ -29,6 +29,7 @@ tools=(
   deno
   graphviz
   jq
+  direnv
 )
 
 # Install apps to /Applications
