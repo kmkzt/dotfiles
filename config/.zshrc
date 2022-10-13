@@ -69,11 +69,10 @@ export PATH=/usr/local/opt/openjdk@11/bin:$PATH
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 # Andoroid Studio
-export ANDROID_SDK=$HOME/Library/Android/sdk
-export PATH=$ANDROID_SDK/tools/bin:$PATH
-export PATH=$ANDROID_SDK/emulator:$PATH
-export PATH=$ANDROID_SDK/platform-tools:$PATH
-alias adb='$ANDROID_SDK/platform-tools/adb'
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK_ROOT/tools/bin:$PATH
+export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
+export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # libpg
 export PATH="/usr/local/opt/libpq/bin:$PATH"
