@@ -56,7 +56,8 @@ source ~/.cargo/env
 
 # Flutter
 # Docs -> https://flutter.dev/docs/get-started/install/macos
-export PATH=$PATH:$HOME/flutter/bin
+PATH_OF_FLUTTER_GIT_DIRECTORY=$GOPATH/src/github.com/flutter/flutter
+export PATH=$PATH:$PATH_OF_FLUTTER_GIT_DIRECTORY/bin
 
 # Dart 
 # PUB: Dart Package Manager -> https://dart.dev/tools/pub/cmd/pub-global#running-a-script-from-your-path
