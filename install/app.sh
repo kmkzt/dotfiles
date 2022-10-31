@@ -30,6 +30,7 @@ tools=(
   graphviz
   jq
   direnv
+  tig
 )
 
 # Install apps to /Applications
