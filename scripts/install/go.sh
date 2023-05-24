@@ -6,11 +6,14 @@ if test ! $(which go); then
 fi
 
 tools=(
-	github.com/itchyny/mmv/cmd/mmv
-	github.com/mattn/files
-	github.com/Arkweid/lefthook
-	golang.org/x/tools/gopls
+	github.com/itchyny/mmv/cmd/mmv@latest
+	github.com/evilmartians/lefthook@latest
+	github.com/mattn/files@latest
+	golang.org/x/tools/gopls@latest
 )
 
-echo "installing go tools..."
-go get -u -v -t ${script[@]}
+for tool in ${tools[@]}
+do
+	echo "installing $tool";
+	go install $tool;
+done

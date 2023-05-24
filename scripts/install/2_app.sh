@@ -8,8 +8,11 @@ apps=(
 )
 
 # Install apps to /Applications
-echo "installing apps..."
-brew install --cask --appdir="/Applications" ${apps[@]}
+for app in ${apps[@]}
+do
+	echo "installing $app"
+	brew install --cask --appdir="/Applications" $app
+done
 
 # Apps
 tools=(
@@ -33,8 +36,11 @@ tools=(
 )
 
 # Install apps to /Applications
-echo "installing tools ..."
-brew install ${tools[@]}
+for tool in ${tools[@]}
+do
+	echo "installing $tool"
+	brew install $tool
+done
 
 # Git install
 brew install git
