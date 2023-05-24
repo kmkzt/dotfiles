@@ -34,7 +34,7 @@ tools=(
 )
 
 # Install apps to /Applications
-echo "installing　tools ..."
+echo "installing tools ..."
 brew install ${tools[@]}
 
 # Git install
