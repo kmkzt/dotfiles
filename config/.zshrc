@@ -52,7 +52,7 @@ fi
 
 # Rust
 source ~/.cargo/env
-# export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Flutter
 # Docs -> https://flutter.dev/docs/get-started/install/macos
