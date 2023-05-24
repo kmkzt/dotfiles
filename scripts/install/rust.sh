@@ -2,7 +2,7 @@
 
 if test ! $(which rustc); then
 	echo "Installing rust..."
-	curl https://sh.rustup.rs -sSf | sh
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
 # update version
