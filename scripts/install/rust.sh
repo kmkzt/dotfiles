@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if test ! $(which rustc); then
-  echo "Installing rust..."
-  curl https://sh.rustup.rs -sSf | sh
+	echo "Installing rust..."
+	curl https://sh.rustup.rs -sSf | sh
 fi
 
 # update version
@@ -12,14 +12,13 @@ rustup toolchain install nightly
 
 # Cargo modules
 mod=(
-  cargo-edit
-  cargo-generate
-  wasm-pack
-  deno
-  starship
+	cargo-edit
+	cargo-generate
+	wasm-pack
+	deno
+	starship
 	bat
 )
-
 
 echo "installing cargo modules..."
 cargo install ${mod[@]}

@@ -2,11 +2,11 @@
 
 # Apps
 tools=(
-  git
-  github/gh/gh
-  git-extras
-  git-delta
-  hub
+	git
+	github/gh/gh
+	git-extras
+	git-delta
+	hub
 )
 
 # Install apps to /Applications

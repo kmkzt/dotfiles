@@ -1,11 +1,10 @@
 #!/bin/sh
 
 # Apps
-# GifCapture: https://github.com/onmyway133/GifCapture
 apps=(
-  google-chrome
-  firefox
-  visual-studio-code
+	google-chrome
+	firefox
+	visual-studio-code
 )
 
 # Install apps to /Applications
@@ -14,23 +13,23 @@ brew install --cask --appdir="/Applications" ${apps[@]}
 
 # Apps
 tools=(
-  lsd
-  cmake
-  tmux
-  gawk
-  nvim
-  fzf
-  peco
-  ghq
-  translate-shell
-  minikube
-  telnet
-  watchman
-  deno
-  graphviz
-  jq
-  direnv
-  tig
+	lsd
+	cmake
+	tmux
+	gawk
+	nvim
+	fzf
+	peco
+	ghq
+	translate-shell
+	minikube
+	telnet
+	watchman
+	deno
+	graphviz
+	jq
+	direnv
+	tig
 )
 
 # Install apps to /Applications

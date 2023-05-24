@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if test ! $(which go); then
-  echo "insalling go..."
-  brew install go
+	echo "insalling go..."
+	brew install go
 fi
 
 tools=(
