@@ -98,7 +98,7 @@ alias gdfn='git diff HEAD..HEAD^ --name-only'
 
 # commitizen https://github.com/commitizen/cz-cli
 # npm install -g commitizen git-cz
-alias gcz='git-cz --disable-emoji' 
+alias gcz='git-cz' 
 
 # shift-jisでの差分
 alias gdf_sjis='git diff --cached | nkf -w | pyenv exec pygmentize -l diff | less -R'
