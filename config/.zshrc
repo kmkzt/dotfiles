@@ -95,7 +95,9 @@ alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
+
 # commitizen https://github.com/commitizen/cz-cli
+# npm install -g commitizen git-cz
 alias gcz='git-cz --disable-emoji' 
 
 # shift-jisでの差分
