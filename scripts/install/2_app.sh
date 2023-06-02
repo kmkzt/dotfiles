@@ -33,6 +33,7 @@ tools=(
 	jq
 	direnv
 	tig
+	tree
 )
 
 # Install apps to /Applications
