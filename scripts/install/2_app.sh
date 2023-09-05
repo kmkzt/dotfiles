@@ -34,6 +34,7 @@ tools=(
 	direnv
 	tig
 	tree
+	postgresql
 )
 
 # Install apps to /Applications
