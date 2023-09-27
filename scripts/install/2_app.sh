@@ -35,6 +35,7 @@ tools=(
 	tig
 	tree
 	postgresql
+	nkf # 文字コード変換
 )
 
 # Install apps to /Applications
