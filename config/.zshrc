@@ -29,7 +29,8 @@ export PATH=$HOME/.anyenv/envs/nodenv/bin:$PATH
 eval "$(nodenv init -)"
 
 ## pnpm
-export PNPM_HOME="$HOME/Library/pnpm":$PATH
+export PNPM_HOME=$HOME/Library/pnpm
+export PATH=$PNPM_HOME:$PATH
 
 # Go
 export GOPATH=$HOME/go
