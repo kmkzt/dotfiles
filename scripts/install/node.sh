@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NODE_VERSION="18.12.0"
+NODE_VERSION="20.15.0"
 CURRENT_NODE_VERSION=$(node -v | sed -e 's/v//')
 
 setup_nodenv() {
