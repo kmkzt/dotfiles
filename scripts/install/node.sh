@@ -14,7 +14,7 @@ setup_node() {
 	eval "$(nodenv install $NODE_VERSION)";
 	eval "$(nodenv global $NODE_VERSION)";
 	eval "$(nodenv rehash)";
-	corepack enable yarn;
+	corepack enable pnpm;
 }
 
 if test ! $(which node); then
