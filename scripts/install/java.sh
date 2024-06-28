@@ -1,2 +1,2 @@
 echo "insalling java..."
-brew install java11
+brew install openjdk@17

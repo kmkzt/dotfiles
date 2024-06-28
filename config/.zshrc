@@ -68,9 +68,7 @@ export PATH=$PATH:$PATH_OF_FLUTTER_GIT_DIRECTORY/bin
 export PATH=$PATH:$HOME/.pub-cache/bin
 
 # JAVA
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-export PATH=/usr/local/opt/openjdk@11/bin:$PATH
-export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # Andoroid Studio
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
