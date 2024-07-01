@@ -81,6 +81,11 @@ export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 # libpg
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+# direnv
+if [[ -x `which direnv` ]]; then
+    eval "$(direnv hook zsh)"
+fi
+
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
 
@@ -218,3 +223,4 @@ function init-gitignore() {
     fi
     curl https://gitignore.io/api/$1 > .gitignore
 }
+
