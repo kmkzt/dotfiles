@@ -69,7 +69,7 @@ export PATH=$PATH:$HOME/.pub-cache/bin
 
 # JAVA
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export JAVA_HOME=$(/usr/libexec/java_home)
 # export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 
 # Andoroid Studio
