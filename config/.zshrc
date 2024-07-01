@@ -69,7 +69,8 @@ export PATH=$PATH:$HOME/.pub-cache/bin
 
 # JAVA
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+# export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 
 # Andoroid Studio
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
