@@ -104,6 +104,7 @@ alias gst='git status'
 alias gg='git grep'
 alias gclear='git branch --merged | grep -v "*" | xargs -I % git branch -d %'
 alias gdfn='git diff HEAD..HEAD^ --name-only'
+alias gwt='git-add-work-tree'
 
 # commitizen https://github.com/commitizen/cz-cli
 # npm install -g commitizen git-cz
@@ -163,6 +164,26 @@ alias killprocess='kill -9 '
 
 # debug brew: https://stackoverflow.com/questions/39797078/another-active-homebrew-process-is-already-in-progress
 alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
+
+# git work-tree command
+
+function git-add-work-tree() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: git-add-work-tree <branch-name> [target-branch]"
+        return 1
+    fi
+
+    local branch=$1
+    local work_tree_directory="$(git rev-parse --show-toplevel)/.git/worktree/$branch"
+
+    echo "mkdir -p $work_tree_directory"
+    mkdir -p $work_tree_directory
+
+    echo "git worktree add ${work_tree_directory} -b $branch $2"
+    git worktree add ${work_tree_directory} -b $branch $2
+
+    cd $work_tree_directory
+}
 
 # change directory repository
 function cd-repo() {
