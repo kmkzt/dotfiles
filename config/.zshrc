@@ -123,6 +123,9 @@ alias gmup='git merge upstream/master'
 # https://github.com/jesseduffield/lazygit
 alias lg='lazygit'
 
+# set claude settings
+alias set-claude-settings="cp ~/.claude/settings.json .claude/settings.local.json"
+
 # docker
 alias d='docker'
 alias dc='docker-compose'
@@ -225,14 +228,6 @@ function cdl() {
         echo "cannot open $type: $selected"
         return
     fi 
-}
-
-# Repeat script
-function repeat() {
-    shift
-    for i in `seq $1`; do
-      $@
-    done
 }
 
 # init .gitignore
