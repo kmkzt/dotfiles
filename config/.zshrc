@@ -123,8 +123,6 @@ alias gmup='git merge upstream/master'
 # https://github.com/jesseduffield/lazygit
 alias lg='lazygit'
 
-# set claude settings
-alias set-claude-settings="cp ~/.claude/settings.json .claude/settings.local.json"
 
 # docker
 alias d='docker'
@@ -172,29 +170,34 @@ alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
 function git-add-work-tree() {
     if [ $# -eq 0 ]; then
-        echo "Usage: git-add-work-tree <branch-name> [target-branch]"
+        echo "Usage: git-add-work-tree <name> [-c]"
         return 1
     fi
 
-    local branch=$1
-    local work_tree_directory="$(git rev-parse --show-toplevel)/.git/worktree/$branch"
+    local name=$1
+    local work_tree="~/worktree"
 
+    if [ $2 -eq "-c" ]; then
+        work_tree="$(git rev-parse --show-toplevel)/.git/worktree"
+    fi
+
+    local work_tree_directory="$work_tree/$name"
     echo "mkdir -p $work_tree_directory"
     mkdir -p $work_tree_directory
 
-    echo "git worktree add ${work_tree_directory} -b $branch $2"
-    git worktree add ${work_tree_directory} -b $branch $2
+    echo "git worktree add ${work_tree_directory} -b $name origin/main"
+    git worktree add ${work_tree_directory} -b $name origin/main
 
     cd $work_tree_directory
 }
 
 # change directory repository
 function cd-repo() {
-    local src=$(ghq list --full-path | peco --query "$BUFFER")
+    local src=$({ ghq list --full-path; find ~/worktree -mindepth 1 -maxdepth 1 -type d 2>/dev/null} | peco --query "$BUFFER")
     if [ -n "$src" ]; then
         BUFFER="cd $src"
         zle accept-line
-    fi 
+    fi
     zle -R -c
 }
 
