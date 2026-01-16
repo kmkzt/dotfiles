@@ -58,6 +58,9 @@ fi
 source ~/.cargo/env
 export PATH=$HOME/.cargo/bin:$PATH
 
+# Claude https://code.claude.com/docs/ja/quickstart
+export PATH="$HOME/.local/bin:$PATH"
+
 # Flutter
 # Docs -> https://flutter.dev/docs/get-started/install/macos
 PATH_OF_FLUTTER_GIT_DIRECTORY=$GOPATH/src/github.com/flutter/flutter
