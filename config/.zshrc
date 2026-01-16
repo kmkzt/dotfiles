@@ -167,7 +167,6 @@ alias killprocess='kill -9 '
 alias debugbrew='rm -rf /usr/local/var/homebrew/locks'
 
 # git work-tree command
-
 function git-add-work-tree() {
     if [ $# -eq 0 ]; then
         echo "Usage: git-add-work-tree <name> [-c]"
@@ -177,7 +176,7 @@ function git-add-work-tree() {
     local name=$1
     local work_tree="~/worktree"
 
-    if [ $2 = "-c" ]; then
+    if [ "$2" = "-c" ]; then
         work_tree="$(git rev-parse --show-toplevel)/.git/worktree"
     fi
 
