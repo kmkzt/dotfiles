@@ -177,7 +177,7 @@ function git-add-work-tree() {
     local name=$1
     local work_tree="~/worktree"
 
-    if [ $2 -eq "-c" ]; then
+    if [ $2 = "-c" ]; then
         work_tree="$(git rev-parse --show-toplevel)/.git/worktree"
     fi
 
