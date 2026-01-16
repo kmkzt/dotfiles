@@ -174,7 +174,7 @@ function git-add-work-tree() {
     fi
 
     local name=$1
-    local work_tree="~/worktree"
+    local work_tree="$HOME/worktree"
 
     if [ "$2" = "-c" ]; then
         work_tree="$(git rev-parse --show-toplevel)/.git/worktree"
@@ -182,12 +182,12 @@ function git-add-work-tree() {
 
     local work_tree_directory="$work_tree/$name"
     echo "mkdir -p $work_tree_directory"
-    mkdir -p $work_tree_directory
+    mkdir -p "$work_tree_directory"
 
     echo "git worktree add ${work_tree_directory} -b $name origin/main"
-    git worktree add ${work_tree_directory} -b $name origin/main
+    git worktree add "$work_tree_directory" -b "$name" origin/main
 
-    cd $work_tree_directory
+    cd "$work_tree_directory"
 }
 
 # change directory repository
