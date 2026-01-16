@@ -177,13 +177,15 @@ function git-add-work-tree() {
     fi
 
     local name=$1
+    local repo_root="$(git rev-parse --show-toplevel)"
+    local repo_name="$(basename "$repo_root")"
     local work_tree="$HOME/worktree"
 
     if [ "$2" = "-c" ]; then
-        work_tree="$(git rev-parse --show-toplevel)/.git/worktree"
+        work_tree="$repo_root/.git/worktree"
     fi
 
-    local work_tree_directory="$work_tree/$name"
+    local work_tree_directory="$work_tree/$repo_name/$name"
     echo "mkdir -p $work_tree_directory"
     mkdir -p "$work_tree_directory"
 
@@ -195,7 +197,7 @@ function git-add-work-tree() {
 
 # change directory repository
 function cd-repo() {
-    local src=$({ ghq list --full-path; find ~/worktree -mindepth 1 -maxdepth 1 -type d 2>/dev/null} | peco --query "$BUFFER")
+    local src=$({ ghq list --full-path; find ~/worktree -mindepth 2 -maxdepth 2 -type d 2>/dev/null} | peco --query "$BUFFER")
     if [ -n "$src" ]; then
         BUFFER="cd $src"
         zle accept-line
